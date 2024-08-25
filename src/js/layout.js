@@ -3,11 +3,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
 import { VistaGeneral } from "./views/vistaGeneral";
+import { InfoPersonajes } from "./store/infoPersonajes";
 
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+
 
 //create your first component
 const Layout = () => {
@@ -22,6 +24,8 @@ const Layout = () => {
 				<Navbar />
 				<Routes>
 					<Route path="/" element={<VistaGeneral />} />
+					<Route path="/infoPersonajes/:id" element={<InfoPersonajes/>}/>
+
 					<Route path="*" element={<h1>Not found!</h1>} />
 				</Routes>
 				<Footer />
