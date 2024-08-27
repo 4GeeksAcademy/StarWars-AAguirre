@@ -26,10 +26,10 @@ const Layout = () => {
 				<Navbar />
 				<Routes>
 					<Route path="/" element={<VistaGeneral />} />
-					<Route path="/infoPersonajes/:id" element={<InfoPersonajes/>}/>
-					<Route path="/infoPlanetas/:id" element={<InfoPlanetas/>}/>
-					<Route path="/infoVehiculos/:id" element={<InfoVehiculos/>}/>
-					
+					<Route path="/infoPersonajes/:id" element={<InfoPersonajes />} />
+					<Route path="/infoPlanetas/:id" element={<InfoPlanetas />} />
+					<Route path="/infoVehiculos/:id" element={<InfoVehiculos />} />
+
 
 					<Route path="*" element={<h1>Not found!</h1>} />
 				</Routes>

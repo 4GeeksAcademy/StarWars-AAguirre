@@ -18,8 +18,8 @@ export const InfoPlanetas = () => {
                 <div className="card-body">
                     <h5 className="card-title"> Name: {store.planetas[id - 1].name}</h5>
                     <p className="card-text">Description: {store.detallesPlanetas[id - 1].description}</p>
-                    <p className="card-text">Climate{store.detallesPlanetas[id - 1].climate}</p>
-                    <p className="card-text">Diameter: {store.detallesPlanetas[id - 1].diameter}</p>
+                    <p className="card-text">Climate: {store.detallesPlanetas[id - 1].properties?.climate}</p>
+                    <p className="card-text">Diameter: {store.detallesPlanetas[id - 1].properties?.diameter}</p>
                     <div className="btn">
                         <Link to="/">
                             <p>
