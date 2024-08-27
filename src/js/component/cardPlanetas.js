@@ -1,11 +1,13 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import "../../styles/cards.css";
+import { Context } from "../store/appContext";
 
 
 
 
 export const CardPlanetas = ({ planetas, id, detallesPlanetas }) => {
+   const {store, actions}= useContext(Context)
 
     let detalles = detallesPlanetas.filter((planet) => { //con filter creo un nuevo array con todos los elemtn q pasan el filtro dado, 
 
@@ -30,7 +32,9 @@ export const CardPlanetas = ({ planetas, id, detallesPlanetas }) => {
                         </p>
 
                     </Link>
-                    <button>Favoritos</button>
+                    <button className="btn-favo" onClick={() => actions.addFavoritos(planetas.name)}>
+                        <i class=" fa fa-solid fa-heart"></i>
+                    </button>
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../store/appContext";
+import "../../styles/cards.css";
 
 
 export const InfoVehiculos = () => {
@@ -11,18 +12,23 @@ export const InfoVehiculos = () => {
     const { id } = useParams();
 
     return (
-        <div className="card_vehiculos" >
-            <img src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} className="card-img-top" alt="..." />
-            <div className="card-body">
-                <h5 className="card-title">{store.vehiculos[id - 1].name}</h5>
-                <p className="card-text">{store.detallesVehiculos[id - 1].description}</p>
-                <div className="btn">
-                    <Link to="/">
-                        <p>
-                            Volver
-                        </p>
+        <div className="principal_info">
+            <div className="card_vehiculos row" >
+                <img src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} className="img_info col-4-sm" alt="..." />
+                <div className="card-body col-3-sm">
+                    <h5 className="card-title">Name : {store.vehiculos[id - 1].name}</h5>
+                    <p className="card-text">Description : {store.detallesVehiculos[id - 1].description}</p>
+                    <p className="card-text">Cargo capacity : {store.vehiculos[id - 1].cargo_capacity}</p>
+                    <p className="card-text">Manufacturer : {store.vehiculos[id - 1].manufacturer}</p>
 
-                    </Link>
+                    <div className="btn">
+                        <Link to="/">
+                            <p>
+                                Volver
+                            </p>
+
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

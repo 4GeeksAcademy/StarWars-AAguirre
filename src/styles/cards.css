@@ -1,9 +1,23 @@
 .card_person,
 .card_vehiculos,
 .card_planets{
-    padding: 10px;
+    padding: 5px;
     margin: 10px;
-    border: 0.5px solid rgb(245, 106, 106);
+    border: 0.5px solid rgb(21, 21, 21);
+    border-radius: 10px;
     height: auto;
     width: auto;
+    background-color: rgb(213, 210, 210);
+}
+
+.card-body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/*info */
+
+.principal_info{
+    height: 300px;
+    width: 500px
 }

@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext } from "react"
 import { Link } from "react-router-dom";
 import "../../styles/cards.css";
 import { Context } from "../store/appContext";
- import "../../styles/cards.css";
+import "../../styles/cards.css";
 
 
 
@@ -10,12 +10,13 @@ import { Context } from "../store/appContext";
 
 export const CardPersonajes = ({ personaje, id, detallesPersonajes }) => {
 
-    const {store,actions}= useContext(Context);
+    const { store, actions } = useContext(Context);
 
-    let nuevo = detallesPersonajes.filter((people)=>{
-        
-       return people.uid == personaje.uid}) [0]
-      
+    let nuevo = detallesPersonajes.filter((people) => {
+
+        return people.uid == personaje.uid
+    })[0]
+
     console.log(store.fav)
     return (
 
@@ -31,11 +32,13 @@ export const CardPersonajes = ({ personaje, id, detallesPersonajes }) => {
                 <div className="btn ">
                     <Link to={`/infoPersonajes/${id}`}>
                         <p>
-                        Learn more!
+                            Learn more!
                         </p>
 
                     </Link>
-                    <button onClick={()=>actions.addFavoritos(personaje.name)}>Favoritos</button>
+                    <button className="btn-favo" onClick={() => actions.addFavoritos(personaje.name)}>
+                    <i class=" fa fa-solid fa-heart"></i>
+                    </button>
                 </div>
             </div>
         </div>
