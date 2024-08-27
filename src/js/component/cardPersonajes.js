@@ -17,11 +17,11 @@ export const CardPersonajes = ({ personaje, id, detallesPersonajes }) => {
         return people.uid == personaje.uid
     })[0]
 
-    console.log(store.fav)
+    
     return (
 
 
-        <div className="card_person " style={{ width: "13rem" }}>
+        <div className="card_person " style={{ width: "14rem" }}>
             <img src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} className="card-img-top" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{personaje.name} </h5>
@@ -37,7 +37,7 @@ export const CardPersonajes = ({ personaje, id, detallesPersonajes }) => {
 
                     </Link>
                     <button className="btn-favo" onClick={() => actions.addFavoritos(personaje.name)}>
-                    <i class=" fa fa-solid fa-heart"></i>
+                    <i className=" fa fa-solid fa-heart"></i>
                     </button>
                 </div>
             </div>

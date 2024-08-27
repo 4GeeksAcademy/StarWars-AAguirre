@@ -7,7 +7,7 @@
     border-radius: 10px;
     height: auto;
     width: auto;
-    background-color: rgb(213, 210, 210);
+    background-color: rgb(73, 72, 72);
 }
 
 .card-body{
@@ -17,7 +17,41 @@
 
 /*info */
 
-.principal_info{
-    height: 300px;
-    width: 500px
+.principal_info {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0;
+    background-image: url("https://wallpaper-house.com/data/out/12/wallpaper2you_531339.jpg");
+    background-image: no-repeat;
+   
+
+}
+
+.card_vehiculos_info,
+.card_planetas_info,
+.card_personajes_info {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    border: 2px solid #dc8888;
+    padding:5px;
+    height: 400px;
+    width: 800px;
+}
+
+.img_info_vehiculos,
+.img_info_planetas,
+.img_info_personajes {
+    height: 100%; 
+    width: auto; 
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    color: white
 }

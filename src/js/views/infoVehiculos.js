@@ -13,9 +13,9 @@ export const InfoVehiculos = () => {
 
     return (
         <div className="principal_info">
-            <div className="card_vehiculos row" >
-                <img src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} className="img_info col-4-sm" alt="..." />
-                <div className="card-body col-3-sm">
+            <div className="card_vehiculos_info row" >
+                <img src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} className="img_info_vehiculos col-4" alt="..." />
+                <div className="card-body col-3">
                     <h5 className="card-title">Name : {store.vehiculos[id - 1].name}</h5>
                     <p className="card-text">Description : {store.detallesVehiculos[id - 1].description}</p>
                     <p className="card-text">Cargo capacity : {store.vehiculos[id - 1].cargo_capacity}</p>

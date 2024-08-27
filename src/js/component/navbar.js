@@ -11,7 +11,7 @@ export const Navbar = () => {
 			<div className="container ">
 				<Link to="/">
 					<span className="navbar-brand mb-0 h3">
-						<img src="https://www.prosportstickers.com/wp-content/uploads/nc/y/star_wars_chrome_looking_logo_sticker__59710.jpg" alt="Logo" width="110px" height="50px" />
+						<img src="https://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG28.png" alt="Logo" width="100px" height="40px" />
 					</span>
 				</Link>
 				<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown"
@@ -36,7 +36,7 @@ export const Navbar = () => {
 											//console.log(e)
 											return (
 												<li className="favorite" key={index}>
-													<div className="col-10">
+													<div className="col-8">
 														<a className="dropdown-item" href="#">{e}</a>
 													</div>
 													<div className="col-2">

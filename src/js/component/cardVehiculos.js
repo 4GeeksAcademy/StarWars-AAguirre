@@ -18,7 +18,7 @@ export const CardVehiculos = ({ detallesVehiculos, vehiculos, id }) => {
     return (
 
 
-        <div className="card_vehiculos" style={{ width: "13rem" }}>
+        <div className="card_vehiculos" style={{ width: "14rem" }}>
             <img src={`https://starwars-visualguide.com/assets/img/vehicles/${id}.jpg`} className="card-img-top" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{vehiculos.name} </h5>
@@ -32,7 +32,7 @@ export const CardVehiculos = ({ detallesVehiculos, vehiculos, id }) => {
 
                     </Link>
                     <button className="btn-favo" onClick={() => actions.addFavoritos(vehiculos.name)}>
-                    <i class=" fa fa-solid fa-heart"></i>
+                    <i className=" fa fa-solid fa-heart"></i>
                     </button>
                 </div>
             </div>

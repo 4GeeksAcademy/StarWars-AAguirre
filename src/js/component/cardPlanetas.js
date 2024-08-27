@@ -19,7 +19,7 @@ export const CardPlanetas = ({ planetas, id, detallesPlanetas }) => {
     return (
 
 
-        <div className="card_planets " style={{ width: "13rem" }}>
+        <div className="card_planets " style={{ width: "14rem" }}>
             <img src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`} className="card-img-top" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{planetas.name} </h5>
@@ -33,7 +33,7 @@ export const CardPlanetas = ({ planetas, id, detallesPlanetas }) => {
 
                     </Link>
                     <button className="btn-favo" onClick={() => actions.addFavoritos(planetas.name)}>
-                        <i class=" fa fa-solid fa-heart"></i>
+                        <i className=" fa fa-solid fa-heart"></i>
                     </button>
                 </div>
             </div>
