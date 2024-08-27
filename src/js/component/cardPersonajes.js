@@ -1,20 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import "../../styles/cards.css";
+import { Context } from "../store/appContext";
+ import "../../styles/cards.css";
+
 
 
 
 
 export const CardPersonajes = ({ personaje, id, detallesPersonajes }) => {
 
+    const {store,actions}= useContext(Context);
+
     let nuevo = detallesPersonajes.filter((people)=>{
         
        return people.uid == personaje.uid}) [0]
       
-    
+    console.log(store.fav)
     return (
 
 
-        <div className="card " style={{ width: "13rem" }}>
+        <div className="card_person " style={{ width: "13rem" }}>
             <img src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} className="card-img-top" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{personaje.name} </h5>
@@ -29,6 +35,7 @@ export const CardPersonajes = ({ personaje, id, detallesPersonajes }) => {
                         </p>
 
                     </Link>
+                    <button onClick={()=>actions.addFavoritos(personaje.name)}>Favoritos</button>
                 </div>
             </div>
         </div>

@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { VistaGeneral } from "./views/vistaGeneral";
 import { InfoPersonajes } from "./views/infoPersonajes";
 import { InfoPlanetas } from "./views/infoPlanetas";
+import { InfoVehiculos } from "./views/infoVehiculos";
 
 import injectContext from "./store/appContext";
 
@@ -27,6 +28,7 @@ const Layout = () => {
 					<Route path="/" element={<VistaGeneral />} />
 					<Route path="/infoPersonajes/:id" element={<InfoPersonajes/>}/>
 					<Route path="/infoPlanetas/:id" element={<InfoPlanetas/>}/>
+					<Route path="/infoVehiculos/:id" element={<InfoVehiculos/>}/>
 					
 
 					<Route path="*" element={<h1>Not found!</h1>} />

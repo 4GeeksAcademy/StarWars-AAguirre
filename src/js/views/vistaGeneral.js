@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import { CardPlanetas } from "../component/cardPlanetas";
 import { CardPersonajes } from "../component/cardPersonajes";
 import { CardVehiculos } from "../component/cardVehiculos";
-import "../../styles/home.css";
+import "../../styles/vistaGeneral.css";
 
 
 
@@ -13,8 +13,8 @@ export const VistaGeneral = () => {
 
 	return (
 
-		<div className="principal ">
-			<div className="card_vistaGeneral row d-flex flex-nowrap overflow-auto">
+		<div className="card_vistaGeneral ">
+			<div className="card_vistaGeneral_person row d-flex flex-nowrap overflow-auto">
 
 				{
 					store.personajes.map((personaje) => (
@@ -23,7 +23,7 @@ export const VistaGeneral = () => {
 				}
 			</div>
 
-			<div className="card_vistaGeneral row d-flex flex-nowrap overflow-auto">
+			<div className="card_vistaGeneral_planets row d-flex flex-nowrap overflow-auto">
 				{
 					store.planetas.map((planetas) => (
 
@@ -33,7 +33,7 @@ export const VistaGeneral = () => {
 				}
 			</div>
 
-			<div className="card_vistaGeneral row d-flex flex-nowrap overflow-auto">
+			<div className="card_vistaGeneral_veh row d-flex flex-nowrap overflow-auto">
 				{
 					store.vehiculos.map((vehiculos) => (
 						<CardVehiculos key={vehiculos.uid} id={vehiculos.uid} vehiculos={vehiculos} detallesVehiculos={store.detallesVehiculos} />

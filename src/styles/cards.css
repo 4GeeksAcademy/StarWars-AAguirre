@@ -1,0 +1,9 @@
+.card_person,
+.card_vehiculos,
+.card_planets{
+    padding: 10px;
+    margin: 10px;
+    border: 0.5px solid rgb(245, 106, 106);
+    height: auto;
+    width: auto;
+}

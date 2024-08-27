@@ -8,7 +8,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planetas: [],
 			detallesPlanetas: [],
 			vehiculos: [],
-			detallesVehiculos: []
+			detallesVehiculos: [], 
+			fav: []
 
 
 
@@ -94,6 +95,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 			traerDetalleVehiculos: async (id)=>{ //tb se puede hacer sin await, fetch devolverá una promesa que será aceptada cuando reciba una resps y solo será rechazada si hay un fallo en la red o no se puede completar la petición. 
 				const respuesta = await fetch( `https://www.swapi.tech/api/vehicles/${id}`)
 				return await respuesta.json()
+			},
+
+			addFavoritos : (nombreFav)=>{
+				const store= getStore();
+				if( store.fav.includes(nombreFav)){
+					setStore({fav:store.fav.filter((repetido)=>repetido != nombreFav )});
+				} else {
+					setStore({fav:[...store.fav,nombreFav]});
+				}
+
 			}
 
 

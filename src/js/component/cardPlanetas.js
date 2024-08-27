@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../../styles/cards.css";
 
 
 
@@ -16,7 +17,7 @@ export const CardPlanetas = ({ planetas, id, detallesPlanetas }) => {
     return (
 
 
-        <div className="card " style={{ width: "18rem" }}>
+        <div className="card_planets " style={{ width: "13rem" }}>
             <img src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`} className="card-img-top" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{planetas.name} </h5>
@@ -29,6 +30,7 @@ export const CardPlanetas = ({ planetas, id, detallesPlanetas }) => {
                         </p>
 
                     </Link>
+                    <button>Favoritos</button>
                 </div>
             </div>
         </div>

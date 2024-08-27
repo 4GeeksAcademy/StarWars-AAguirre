@@ -11,7 +11,7 @@ export const InfoPersonajes = () => {
     const { id } = useParams();
 
     return (
-        <div className="card" >
+        <div className="card_personajes" >
             <img src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} className="card-img-top" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{store.planetas[id - 1].name}</h5>
