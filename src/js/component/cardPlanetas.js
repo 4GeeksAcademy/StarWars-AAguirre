@@ -20,6 +20,7 @@ export const CardPlanetas = ({ planetas, id, detallesPlanetas }) => {
 
 
         <div className="card_planets " style={{ width: "14rem" }}>
+       
             <img src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`} className="card-img-top-" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{planetas.name} </h5>

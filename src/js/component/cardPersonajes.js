@@ -22,6 +22,7 @@ export const CardPersonajes = ({ personaje, id, detallesPersonajes }) => {
 
 
         <div className="card_person " style={{ width: "14rem" }}>
+            
             <img src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} className="card-img-top" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{personaje.name} </h5>

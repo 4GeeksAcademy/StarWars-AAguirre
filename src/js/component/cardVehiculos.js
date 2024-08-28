@@ -19,6 +19,7 @@ export const CardVehiculos = ({ detallesVehiculos, vehiculos, id }) => {
 
 
         <div className="card_vehiculos" style={{ width: "14rem" }}>
+            
             <img src={`https://starwars-visualguide.com/assets/img/vehicles/${id}.jpg`} className="card-img-top" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{vehiculos.name} </h5>

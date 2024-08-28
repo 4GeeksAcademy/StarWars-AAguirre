@@ -14,7 +14,9 @@ export const VistaGeneral = () => {
 	return (
 
 		<div className="card_vistaGeneral ">
+
 			<div className="card_vistaGeneral_person row d-flex flex-nowrap overflow-auto">
+				<h2 className="titulo">	Characters  </h2>
 
 				{
 					store.personajes.map((personaje) => (
@@ -24,6 +26,7 @@ export const VistaGeneral = () => {
 			</div>
 
 			<div className="card_vistaGeneral_planets row d-flex flex-nowrap overflow-auto">
+				<h2 className="titulo">Planets </h2>
 				{
 					store.planetas.map((planetas) => (
 
@@ -34,6 +37,7 @@ export const VistaGeneral = () => {
 			</div>
 
 			<div className="card_vistaGeneral_veh row d-flex flex-nowrap overflow-auto">
+				<h2 className="titulo">Vehicles </h2>
 				{
 					store.vehiculos.map((vehiculos) => (
 						<CardVehiculos key={vehiculos.uid} id={vehiculos.uid} vehiculos={vehiculos} detallesVehiculos={store.detallesVehiculos} />
